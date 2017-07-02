@@ -362,8 +362,6 @@ namespace FractalObserverApplication
                 aXmlWriter.WriteEndElement();
 
                 aXmlWriter.WriteEndDocument();
-
-                aXmlWriter.Close();
             }
             finally
             {
