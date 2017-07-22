@@ -346,6 +346,7 @@ namespace FractalObserverApplication
                     }
                     else
                     {
+                        myCurrentZoomRectangleOperation = ZoomingRectangleOperations.None;
                         this.Cursor = Cursors.Default;
                     }
                 }
@@ -475,12 +476,31 @@ namespace FractalObserverApplication
             }
             else
             {
+                myCurrentZoomRectangleOperation = ZoomingRectangleOperations.None;
                 this.Cursor = Cursors.Default;
             }
 
             // showing of current mouse position in plane coordinates in status bar
             PointInPlane tempMousePositionInPlane = tempTransformation.GetPlaneCoordinates(aCurrentMouseLocation.X, aCurrentMouseLocation.Y);
             tsStatusLabelMousePosition.Text = "Current Mouse Position : X = " + Convert.ToString(tempMousePositionInPlane.x, CultureInfo.CurrentCulture) + " Y= " + Convert.ToString(tempMousePositionInPlane.y, CultureInfo.CurrentCulture);
+        }
+
+        private void menuMain_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (myCurrentZoomRectangleOperation != ZoomingRectangleOperations.None)
+            {
+                myCurrentZoomRectangleOperation = ZoomingRectangleOperations.None;
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void sstripMainForm_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (myCurrentZoomRectangleOperation != ZoomingRectangleOperations.None)
+            {
+                myCurrentZoomRectangleOperation = ZoomingRectangleOperations.None;
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void zoomToZoomRectangleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -761,6 +781,7 @@ namespace FractalObserverApplication
                 myMouseIsDown = false;
                 myIsPanNow = false;
                 myCurrentZoomRectangleOperation = ZoomingRectangleOperations.None;
+                this.Cursor = Cursors.Default;
             }
         }
 

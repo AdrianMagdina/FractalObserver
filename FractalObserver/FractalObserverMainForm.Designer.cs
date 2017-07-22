@@ -89,6 +89,7 @@ namespace FractalObserverApplication
             // 
             // menuMain
             // 
+            this.menuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mainMenuToolStripMenuItem,
             this.viewToolStripMenuItem,
@@ -97,9 +98,11 @@ namespace FractalObserverApplication
             this.helpToolStripMenuItem});
             this.menuMain.Location = new System.Drawing.Point(0, 0);
             this.menuMain.Name = "menuMain";
-            this.menuMain.Size = new System.Drawing.Size(887, 24);
+            this.menuMain.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuMain.Size = new System.Drawing.Size(1183, 28);
             this.menuMain.TabIndex = 0;
             this.menuMain.Text = "menuStrip1";
+            this.menuMain.MouseMove += new System.Windows.Forms.MouseEventHandler(this.menuMain_MouseMove);
             // 
             // mainMenuToolStripMenuItem
             // 
@@ -111,44 +114,44 @@ namespace FractalObserverApplication
             this.toolStripSeparator3,
             this.exitToolStripMenuItem});
             this.mainMenuToolStripMenuItem.Name = "mainMenuToolStripMenuItem";
-            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.mainMenuToolStripMenuItem.Size = new System.Drawing.Size(44, 24);
             this.mainMenuToolStripMenuItem.Text = "File";
             // 
             // drawFractalToolStripMenuItem
             // 
             this.drawFractalToolStripMenuItem.Name = "drawFractalToolStripMenuItem";
-            this.drawFractalToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.drawFractalToolStripMenuItem.Size = new System.Drawing.Size(325, 26);
             this.drawFractalToolStripMenuItem.Text = "Draw Fractal";
             this.drawFractalToolStripMenuItem.Click += new System.EventHandler(this.drawFractalToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(264, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(322, 6);
             // 
             // loadFractalObserverConfigurationFromFileToolStripMenuItem
             // 
             this.loadFractalObserverConfigurationFromFileToolStripMenuItem.Name = "loadFractalObserverConfigurationFromFileToolStripMenuItem";
-            this.loadFractalObserverConfigurationFromFileToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.loadFractalObserverConfigurationFromFileToolStripMenuItem.Size = new System.Drawing.Size(325, 26);
             this.loadFractalObserverConfigurationFromFileToolStripMenuItem.Text = "Load Fractal Configuration From File";
             this.loadFractalObserverConfigurationFromFileToolStripMenuItem.Click += new System.EventHandler(this.loadFractalObserverConfigurationToolStripMenuItem_Click);
             // 
             // loadBackgroundImageToolStripMenuItem
             // 
             this.loadBackgroundImageToolStripMenuItem.Name = "loadBackgroundImageToolStripMenuItem";
-            this.loadBackgroundImageToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.loadBackgroundImageToolStripMenuItem.Size = new System.Drawing.Size(325, 26);
             this.loadBackgroundImageToolStripMenuItem.Text = "Load Background Image";
             this.loadBackgroundImageToolStripMenuItem.Click += new System.EventHandler(this.loadBackgroundImageToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(264, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(322, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(325, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -158,7 +161,7 @@ namespace FractalObserverApplication
             this.showZoomRectangleToolStripMenuItem,
             this.showGridToolStripMenuItem});
             this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-            this.viewToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.viewToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.viewToolStripMenuItem.Text = "View";
             // 
             // showZoomRectangleToolStripMenuItem
@@ -167,7 +170,7 @@ namespace FractalObserverApplication
             this.showZoomRectangleToolStripMenuItem.CheckOnClick = true;
             this.showZoomRectangleToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.showZoomRectangleToolStripMenuItem.Name = "showZoomRectangleToolStripMenuItem";
-            this.showZoomRectangleToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.showZoomRectangleToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.showZoomRectangleToolStripMenuItem.Text = "Show Zoom Rectangle";
             this.showZoomRectangleToolStripMenuItem.Click += new System.EventHandler(this.showZoomRectangleToolStripMenuItem_Click);
             // 
@@ -175,7 +178,7 @@ namespace FractalObserverApplication
             // 
             this.showGridToolStripMenuItem.CheckOnClick = true;
             this.showGridToolStripMenuItem.Name = "showGridToolStripMenuItem";
-            this.showGridToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.showGridToolStripMenuItem.Size = new System.Drawing.Size(234, 26);
             this.showGridToolStripMenuItem.Text = "Show Grid";
             this.showGridToolStripMenuItem.Click += new System.EventHandler(this.showGridToolStripMenuItem_Click);
             // 
@@ -193,72 +196,72 @@ namespace FractalObserverApplication
             this.toolStripSeparator5,
             this.zoomToPreviousToolStripMenuItem});
             this.zoomToolStripMenuItem.Name = "zoomToolStripMenuItem";
-            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.zoomToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.zoomToolStripMenuItem.Text = "Zoom";
             // 
             // zoomInToZoomRectangleToolStripMenuItem
             // 
             this.zoomInToZoomRectangleToolStripMenuItem.Name = "zoomInToZoomRectangleToolStripMenuItem";
-            this.zoomInToZoomRectangleToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomInToZoomRectangleToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomInToZoomRectangleToolStripMenuItem.Text = "Zoom In To Zoom Rectangle";
             this.zoomInToZoomRectangleToolStripMenuItem.Click += new System.EventHandler(this.zoomToZoomRectangleToolStripMenuItem_Click);
             // 
             // zoomIn15xToolStripMenuItem
             // 
             this.zoomIn15xToolStripMenuItem.Name = "zoomIn15xToolStripMenuItem";
-            this.zoomIn15xToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomIn15xToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomIn15xToolStripMenuItem.Text = "Zoom In 1.5x";
             this.zoomIn15xToolStripMenuItem.Click += new System.EventHandler(this.zoomIn15xToolStripMenuItem_Click);
             // 
             // zoomIn2xToolStripMenuItem
             // 
             this.zoomIn2xToolStripMenuItem.Name = "zoomIn2xToolStripMenuItem";
-            this.zoomIn2xToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomIn2xToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomIn2xToolStripMenuItem.Text = "Zoom In 2x";
             this.zoomIn2xToolStripMenuItem.Click += new System.EventHandler(this.zoomIn2xToolStripMenuItem_Click);
             // 
             // zoomIn5xToolStripMenuItem
             // 
             this.zoomIn5xToolStripMenuItem.Name = "zoomIn5xToolStripMenuItem";
-            this.zoomIn5xToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomIn5xToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomIn5xToolStripMenuItem.Text = "Zoom In 5x";
             this.zoomIn5xToolStripMenuItem.Click += new System.EventHandler(this.zoomIn5xToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(271, 6);
             // 
             // zoomOutToolStripMenuItem
             // 
             this.zoomOutToolStripMenuItem.Name = "zoomOutToolStripMenuItem";
-            this.zoomOutToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomOutToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomOutToolStripMenuItem.Text = "Zoom Out 1.5x";
             this.zoomOutToolStripMenuItem.Click += new System.EventHandler(this.zoomOutToolStripMenuItem_Click);
             // 
             // zoomOut2xToolStripMenuItem
             // 
             this.zoomOut2xToolStripMenuItem.Name = "zoomOut2xToolStripMenuItem";
-            this.zoomOut2xToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomOut2xToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomOut2xToolStripMenuItem.Text = "Zoom Out 2x";
             this.zoomOut2xToolStripMenuItem.Click += new System.EventHandler(this.zoomOut2xToolStripMenuItem_Click);
             // 
             // zoomOut5xToolStripMenuItem
             // 
             this.zoomOut5xToolStripMenuItem.Name = "zoomOut5xToolStripMenuItem";
-            this.zoomOut5xToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomOut5xToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomOut5xToolStripMenuItem.Text = "Zoom Out 5x";
             this.zoomOut5xToolStripMenuItem.Click += new System.EventHandler(this.zoomOut5xToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(271, 6);
             // 
             // zoomToPreviousToolStripMenuItem
             // 
             this.zoomToPreviousToolStripMenuItem.Name = "zoomToPreviousToolStripMenuItem";
-            this.zoomToPreviousToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
+            this.zoomToPreviousToolStripMenuItem.Size = new System.Drawing.Size(274, 26);
             this.zoomToPreviousToolStripMenuItem.Text = "Zoom To Previous";
             this.zoomToPreviousToolStripMenuItem.Click += new System.EventHandler(this.zoomToPreviousToolStripMenuItem_Click);
             // 
@@ -269,27 +272,27 @@ namespace FractalObserverApplication
             this.configureFractalColorsToolStripMenuItem,
             this.configureZoomRectangleAndGridToolStripMenuItem});
             this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
-            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(93, 20);
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(112, 24);
             this.optionsToolStripMenuItem.Text = "Configuration";
             // 
             // configureFractalObserverToolStripMenuItem
             // 
             this.configureFractalObserverToolStripMenuItem.Name = "configureFractalObserverToolStripMenuItem";
-            this.configureFractalObserverToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.configureFractalObserverToolStripMenuItem.Size = new System.Drawing.Size(326, 26);
             this.configureFractalObserverToolStripMenuItem.Text = "Configure Fractal Values";
             this.configureFractalObserverToolStripMenuItem.Click += new System.EventHandler(this.configureFractalToolStripMenuItem_Click);
             // 
             // configureFractalColorsToolStripMenuItem
             // 
             this.configureFractalColorsToolStripMenuItem.Name = "configureFractalColorsToolStripMenuItem";
-            this.configureFractalColorsToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.configureFractalColorsToolStripMenuItem.Size = new System.Drawing.Size(326, 26);
             this.configureFractalColorsToolStripMenuItem.Text = "Configure Fractal Colors";
             this.configureFractalColorsToolStripMenuItem.Click += new System.EventHandler(this.configureFractalColorsToolStripMenuItem_Click);
             // 
             // configureZoomRectangleAndGridToolStripMenuItem
             // 
             this.configureZoomRectangleAndGridToolStripMenuItem.Name = "configureZoomRectangleAndGridToolStripMenuItem";
-            this.configureZoomRectangleAndGridToolStripMenuItem.Size = new System.Drawing.Size(267, 22);
+            this.configureZoomRectangleAndGridToolStripMenuItem.Size = new System.Drawing.Size(326, 26);
             this.configureZoomRectangleAndGridToolStripMenuItem.Text = "Configure Zoom Rectangle And Grid";
             this.configureZoomRectangleAndGridToolStripMenuItem.Click += new System.EventHandler(this.configureGridToolStripMenuItem_Click);
             // 
@@ -299,20 +302,20 @@ namespace FractalObserverApplication
             this.helpToolStripMenuItem1,
             this.aboutFractalObserverToolStripMenuItem});
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // helpToolStripMenuItem1
             // 
             this.helpToolStripMenuItem1.Name = "helpToolStripMenuItem1";
-            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
+            this.helpToolStripMenuItem1.Size = new System.Drawing.Size(232, 26);
             this.helpToolStripMenuItem1.Text = "Help";
             this.helpToolStripMenuItem1.Click += new System.EventHandler(this.helpToolStripMenuItem1_Click);
             // 
             // aboutFractalObserverToolStripMenuItem
             // 
             this.aboutFractalObserverToolStripMenuItem.Name = "aboutFractalObserverToolStripMenuItem";
-            this.aboutFractalObserverToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.aboutFractalObserverToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.aboutFractalObserverToolStripMenuItem.Text = "About FractalObserver";
             this.aboutFractalObserverToolStripMenuItem.Click += new System.EventHandler(this.aboutFractalObserverToolStripMenuItem_Click);
             // 
@@ -324,9 +327,10 @@ namespace FractalObserverApplication
             this.FractalImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.FractalImage.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.FractalImage.ContextMenuStrip = this.contextMenuMain;
-            this.FractalImage.Location = new System.Drawing.Point(0, 27);
+            this.FractalImage.Location = new System.Drawing.Point(0, 33);
+            this.FractalImage.Margin = new System.Windows.Forms.Padding(4);
             this.FractalImage.Name = "FractalImage";
-            this.FractalImage.Size = new System.Drawing.Size(887, 540);
+            this.FractalImage.Size = new System.Drawing.Size(1181, 664);
             this.FractalImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.FractalImage.TabIndex = 1;
             this.FractalImage.TabStop = false;
@@ -338,6 +342,7 @@ namespace FractalObserverApplication
             // 
             // contextMenuMain
             // 
+            this.contextMenuMain.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.contextMenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawFractalToolStripMenuItem1,
             this.toolStripSeparator8,
@@ -353,112 +358,116 @@ namespace FractalObserverApplication
             this.toolStripSeparator7,
             this.loadBackgroundImageToolStripMenuItem1});
             this.contextMenuMain.Name = "contextMenuMain";
-            this.contextMenuMain.Size = new System.Drawing.Size(227, 242);
+            this.contextMenuMain.Size = new System.Drawing.Size(269, 262);
             // 
             // drawFractalToolStripMenuItem1
             // 
             this.drawFractalToolStripMenuItem1.Name = "drawFractalToolStripMenuItem1";
-            this.drawFractalToolStripMenuItem1.Size = new System.Drawing.Size(226, 22);
+            this.drawFractalToolStripMenuItem1.Size = new System.Drawing.Size(268, 24);
             this.drawFractalToolStripMenuItem1.Text = "Draw Fractal";
             this.drawFractalToolStripMenuItem1.Click += new System.EventHandler(this.drawFractalToolStripMenuItem_Click);
             // 
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(265, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem2.Text = "Zoom In To Zoom Rectangle";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.zoomToZoomRectangleToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem6.Text = "Zoom In 1.5x";
             this.toolStripMenuItem6.Click += new System.EventHandler(this.zoomIn15xToolStripMenuItem_Click);
             // 
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem7.Text = "Zoom In 2x";
             this.toolStripMenuItem7.Click += new System.EventHandler(this.zoomIn2xToolStripMenuItem_Click);
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem8.Text = "Zoom In 5x";
             this.toolStripMenuItem8.Click += new System.EventHandler(this.zoomIn5xToolStripMenuItem_Click);
             // 
             // toolStripSeparator6
             // 
             this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator6.Size = new System.Drawing.Size(265, 6);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem3.Text = "Zoom Out 1.5x";
             this.toolStripMenuItem3.Click += new System.EventHandler(this.zoomOutToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem4.Text = "Zoom Out 2x";
             this.toolStripMenuItem4.Click += new System.EventHandler(this.zoomOut2xToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem5.Text = "Zoom Out 5x";
             this.toolStripMenuItem5.Click += new System.EventHandler(this.zoomOut5xToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(226, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(268, 24);
             this.toolStripMenuItem1.Text = "Zoom To Previous";
             this.toolStripMenuItem1.Click += new System.EventHandler(this.zoomToPreviousToolStripMenuItem_Click);
             // 
             // toolStripSeparator7
             // 
             this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(223, 6);
+            this.toolStripSeparator7.Size = new System.Drawing.Size(265, 6);
             // 
             // loadBackgroundImageToolStripMenuItem1
             // 
             this.loadBackgroundImageToolStripMenuItem1.Name = "loadBackgroundImageToolStripMenuItem1";
-            this.loadBackgroundImageToolStripMenuItem1.Size = new System.Drawing.Size(226, 22);
+            this.loadBackgroundImageToolStripMenuItem1.Size = new System.Drawing.Size(268, 24);
             this.loadBackgroundImageToolStripMenuItem1.Text = "Load Background Image";
             this.loadBackgroundImageToolStripMenuItem1.Click += new System.EventHandler(this.loadBackgroundImageToolStripMenuItem_Click);
             // 
             // FractalProgress
             // 
             this.FractalProgress.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.FractalProgress.Location = new System.Drawing.Point(12, 285);
+            this.FractalProgress.Location = new System.Drawing.Point(16, 351);
+            this.FractalProgress.Margin = new System.Windows.Forms.Padding(4);
             this.FractalProgress.Name = "FractalProgress";
-            this.FractalProgress.Size = new System.Drawing.Size(863, 23);
+            this.FractalProgress.Size = new System.Drawing.Size(1151, 28);
             this.FractalProgress.TabIndex = 2;
             this.FractalProgress.Visible = false;
             // 
             // sstripMainForm
             // 
+            this.sstripMainForm.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.sstripMainForm.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsStatusLabelFractalType,
             this.tsStatusLabelGridSpacing,
             this.tsStatusLabelMousePosition});
-            this.sstripMainForm.Location = new System.Drawing.Point(0, 570);
+            this.sstripMainForm.Location = new System.Drawing.Point(0, 705);
             this.sstripMainForm.Name = "sstripMainForm";
-            this.sstripMainForm.Size = new System.Drawing.Size(887, 22);
+            this.sstripMainForm.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.sstripMainForm.Size = new System.Drawing.Size(1183, 24);
             this.sstripMainForm.TabIndex = 3;
+            this.sstripMainForm.MouseMove += new System.Windows.Forms.MouseEventHandler(this.sstripMainForm_MouseMove);
             // 
             // tsStatusLabelFractalType
             // 
@@ -467,7 +476,7 @@ namespace FractalObserverApplication
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tsStatusLabelFractalType.BorderStyle = System.Windows.Forms.Border3DStyle.Bump;
             this.tsStatusLabelFractalType.Name = "tsStatusLabelFractalType";
-            this.tsStatusLabelFractalType.Size = new System.Drawing.Size(4, 17);
+            this.tsStatusLabelFractalType.Size = new System.Drawing.Size(4, 19);
             // 
             // tsStatusLabelGridSpacing
             // 
@@ -476,7 +485,7 @@ namespace FractalObserverApplication
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tsStatusLabelGridSpacing.BorderStyle = System.Windows.Forms.Border3DStyle.Bump;
             this.tsStatusLabelGridSpacing.Name = "tsStatusLabelGridSpacing";
-            this.tsStatusLabelGridSpacing.Size = new System.Drawing.Size(4, 17);
+            this.tsStatusLabelGridSpacing.Size = new System.Drawing.Size(4, 19);
             // 
             // tsStatusLabelMousePosition
             // 
@@ -485,7 +494,7 @@ namespace FractalObserverApplication
             | System.Windows.Forms.ToolStripStatusLabelBorderSides.Bottom)));
             this.tsStatusLabelMousePosition.BorderStyle = System.Windows.Forms.Border3DStyle.Bump;
             this.tsStatusLabelMousePosition.Name = "tsStatusLabelMousePosition";
-            this.tsStatusLabelMousePosition.Size = new System.Drawing.Size(4, 17);
+            this.tsStatusLabelMousePosition.Size = new System.Drawing.Size(4, 19);
             // 
             // saveDrawnFractalDialog
             // 
@@ -501,13 +510,14 @@ namespace FractalObserverApplication
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 592);
+            this.ClientSize = new System.Drawing.Size(1183, 729);
             this.Controls.Add(this.sstripMainForm);
             this.Controls.Add(this.FractalProgress);
             this.Controls.Add(this.menuMain);
             this.Controls.Add(this.FractalImage);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";
             this.Text = "Fractal Observer";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
