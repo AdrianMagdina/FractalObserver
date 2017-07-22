@@ -34,9 +34,9 @@ namespace FractalObserverApplication
 
         private void timerAboutProgram_Tick(object sender, EventArgs e)
         {
-            if (myAlphaValue < 255)
+            if (myAlphaValue < 254)
             {
-                myAlphaValue++;
+                myAlphaValue += 2;
             }
 
             this.Invalidate(new Rectangle((int)myAppName.X, (int)myAppName.Y, (int)myAppName.Width, (int)myAppName.Height));

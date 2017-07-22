@@ -35,7 +35,7 @@
             // 
             // timerAboutProgram
             // 
-            this.timerAboutProgram.Interval = 10;
+            this.timerAboutProgram.Interval = 2;
             this.timerAboutProgram.Tick += new System.EventHandler(this.timerAboutProgram_Tick);
             // 
             // btnOk
